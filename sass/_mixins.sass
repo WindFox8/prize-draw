@@ -1,0 +1,29 @@
+@use 'variables'
+
+@mixin flex-center
+    display: flex
+    justify-content: center
+    align-items: center
+
+@mixin grid-column
+    display: grid
+    grid-template-columns: 50% 50%
+
+@mixin flex-direction
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+
+@mixin button-style
+    margin: 1rem
+    border-radius: 5px
+    height: 2.5rem
+    font-weight: 700
+    border: 2px solid variables.$color-2
+    transition-duration: .4s
+
+    &:hover
+        color: variables.$color-4
+        background-color: variables.$color-2
+        cursor: pointer
+    

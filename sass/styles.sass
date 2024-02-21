@@ -1,0 +1,208 @@
+@use 'variables'
+@use 'mixins'
+    
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    list-style: none
+    background: none
+    font-family: variables.$font
+    font-size: 20px
+    color: variables.$color-2
+    border: none
+
+
+body
+    width: 100%
+    height: 100vh
+    @include mixins.flex-center
+    background-color: variables.$color-1
+
+.container
+    width: 1000px
+    aspect-ratio: 1.5/1
+    @include mixins.grid-column
+    border-radius: 20px
+    background-color: variables.$color-4
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5)
+
+    &-section
+        padding: 1rem
+
+        &-navBar
+            height: 10%
+            font-weight: 500
+
+            ul
+                width: 100%
+                display: flex
+                justify-content: space-around
+                padding: 1rem
+
+                li 
+                    font-weight: 600
+
+                    &:hover
+                        border-bottom: 2px solid variables.$color-2
+                        cursor: pointercenter
+
+        &-main
+            @include mixins.flex-direction
+            height: 90%
+
+            &-header
+                @include mixins.flex-center
+                @include mixins.flex-direction
+                padding: 0 1rem
+                height: 20%
+                text-align: center
+
+                h1
+                    font-size: 40px
+
+                    i
+                        font-size: 40px
+
+
+            &-form
+                @include mixins.flex-direction
+                height: 80%
+
+                &-field
+                    position: relative
+                    @include mixins.flex-direction
+                    justify-content: none
+                    padding: 0.7rem 0
+
+                    label
+                        padding: 0 0 0.5rem 0rem
+                        font-weight: 600
+
+                    input
+                        background-color: variables.$color-5
+                        border-radius: 5px
+                        height: 2rem
+                        padding: 0.5rem
+
+                        &:focus
+                            border: 2px solid variables.$color-2
+
+                    i
+                        position: absolute
+                        top: 57%
+                        right: 0.5rem                
+
+                &-checkbox
+                    padding: 0 0.5rem
+                    @include mixins.flex-center
+                    gap: 5px
+
+                button
+                    @include mixins.button-style
+
+        &-article
+            overflow-y: auto
+            display: none
+            
+            &-table
+                width: 100%
+
+                tr
+                    @include mixins.flex-center
+                    @include mixins.grid-column
+                    text-align: center
+
+                    th
+                        border-bottom: 2px solid black
+                        margin: 1rem 
+                        padding-bottom: 0.1rem
+
+        &-section
+            @include mixins.flex-center
+            display: none
+            flex-direction: column
+            height: 80%
+            width: 100%
+            text-align: center
+
+            h1
+                font-size: 34px
+                font-weight: 700
+
+            button
+                @include mixins.button-style
+                border-radius: 100%
+                width: 150px
+                height: 150px
+
+    &-prizeImage
+        background-image: url('../img/prize-bg.webp')
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+        background-color: variables.$color-3
+        border-radius: 0 20px 20px 0
+
+    &-message
+        display: flex
+        gap: 1rem
+        position: absolute
+        left: 50%
+        top: 1rem
+        transform: translateX(-50%)
+
+        &-error
+            @include mixins.flex-center
+            display: none
+            background-color: orange
+            text-align: center
+            padding: 1rem
+            font-weight: 500
+            width: 180px
+            aspect-ratio: 1/1
+            border-radius: 5px
+            position: relative
+
+            p, b
+                font-size: 17px
+
+            i
+                position: absolute
+                top: 0.4rem
+                right: 0.4rem
+
+                &:hover
+                    cursor: pointer
+
+.active
+    border-bottom: 2px solid variables.$color-2
+
+.fa-circle-check
+    color: green
+    
+.fa-circle-xmark
+    color: red
+
+.invalidValue
+    border: 2px solid red
+
+.nameCapitalize
+    text-transform: capitalize
+
+footer
+    position: absolute
+    bottom: 10px
+    justify-content: center
+    font-weight: 300
+
+    p, p i, p a
+        color: variables.$color-4
+        text-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5)
+
+        a
+            &:hover
+                color: variables.$color-3
+                i
+                    color: variables.$color-3
+

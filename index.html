@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prize Draw</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/5b4f015aa1.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <section class="container-section">
+            <nav class="container-section-navBar">
+                <ul>
+                    <li class="active" id="registerButton">REGISTER</li>
+                    <li id="subscribedButton">SUBSCRIBED</li>
+                    <li id="drawButton">DRAW</li>
+                </ul>
+            </nav>
+            <main class="container-section-main" id="register">
+                <header class="container-section-main-header">
+                    <h1><i class="fa-solid fa-gift fa-shake"></i> Prize Draw <i class="fa-solid fa-gift fa-shake"></i></h1>
+                    <p>Register to participate in the GAMING COMPUTER prize draw.</p>
+                </header>
+                <form class="container-section-main-form" id="form" action="">
+                    <div class="container-section-main-form-field" id="name_field">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" placeholder="Name">
+                        <i class="fa-regular"></i>
+                    </div>
+                    <div class="container-section-main-form-field" id="email_field">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="email@email.com">
+                        <i class="fa-regular"></i>
+                    </div>
+                    <div class="container-section-main-form-field" id="phone_field">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" name="phone" id="phone" placeholder="(DD)XXXXX-XXXX">
+                        <i class="fa-regular"></i>
+                    </div>
+                    <div class="container-section-main-form-checkbox" id="checkbox_field">
+                        <input type="checkbox" name="checkbox" id="checkbox">
+                        <label for="checkbox">Accept the terms and conditions</label>
+                    </div>
+                    <button id="submit">Submit</button>
+                </form>
+            </main>
+            <article class="container-section-article" id="subscribed">
+                <table class="container-section-article-table" id="table">
+                </table>
+            </article>
+            <section class="container-section-section" id="draw">
+                <h1><i class="fa-solid fa-dice fa-2xl"></i> Click here <i class="fa-solid fa-dice fa-flip-horizontal fa-2xl"></i><br>to draw<br><br><i class="fa-solid fa-down-long fa-2xl"></i></h1>  
+                <br> 
+                <button>DRAW<br>NOW</button>
+            </section>
+        </section>
+        <div class="container-prizeImage"></div>
+        <span class="container-message">
+            <div class="container-message-error name_error" id="message">
+                <p><b>Name invalid!<br><br>Attention:</b> The name cannot contain special characters</p>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="container-message-error email_error" id="message">
+                <p><b>Email invalid!<br><br>Attention:</b> The email must have the following format email@email.com</p>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="container-message-error phone_error" id="message">
+                <p><b>Phone invalid!<br><br>Attention:</b> The telephone number cannot contain blank spaces or "-"</p>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="container-message-error checkbox_error" id="message">
+                <p><b>To continue</b> accept the terms and conditions</p>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="container-message-error" id="submitError">
+                <p><b>Invalid<br>form!!!</b></p>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="container-message-error" id="submitSuccess">
+                <p><b>Subscribe complete successfully!</b></p>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </span>
+    </div>
+    <footer><p class="copyright">Copyright © - 2024 - By <a href="https://github.com/WindFox8">Rafael Correr <i class="fa-brands fa-github" ></i></a></p></footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

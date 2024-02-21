@@ -1,0 +1,255 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  background: none;
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  color: #013E6A;
+  border: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #32816d;
+}
+
+.container {
+  width: 1000px;
+  aspect-ratio: 1.5/1;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+}
+.container-section {
+  padding: 1rem;
+}
+.container-section-navBar {
+  height: 10%;
+  font-weight: 500;
+}
+.container-section-navBar ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+.container-section-navBar ul li {
+  font-weight: 600;
+}
+.container-section-navBar ul li:hover {
+  border-bottom: 2px solid #013E6A;
+  cursor: pointercenter;
+}
+.container-section-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 90%;
+}
+.container-section-main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 1rem;
+  height: 20%;
+  text-align: center;
+}
+.container-section-main-header h1 {
+  font-size: 40px;
+}
+.container-section-main-header h1 i {
+  font-size: 40px;
+}
+.container-section-main-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 80%;
+}
+.container-section-main-form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  justify-content: none;
+  padding: 0.7rem 0;
+}
+.container-section-main-form-field label {
+  padding: 0 0 0.5rem 0rem;
+  font-weight: 600;
+}
+.container-section-main-form-field input {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  height: 2rem;
+  padding: 0.5rem;
+}
+.container-section-main-form-field input:focus {
+  border: 2px solid #013E6A;
+}
+.container-section-main-form-field i {
+  position: absolute;
+  top: 57%;
+  right: 0.5rem;
+}
+.container-section-main-form-checkbox {
+  padding: 0 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.container-section-main-form button {
+  margin: 1rem;
+  border-radius: 5px;
+  height: 2.5rem;
+  font-weight: 700;
+  border: 2px solid #013E6A;
+  transition-duration: 0.4s;
+}
+.container-section-main-form button:hover {
+  color: #fff;
+  background-color: #013E6A;
+  cursor: pointer;
+}
+.container-section-article {
+  overflow-y: auto;
+  display: none;
+}
+.container-section-article-table {
+  width: 100%;
+}
+.container-section-article-table tr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  text-align: center;
+}
+.container-section-article-table tr th {
+  border-bottom: 2px solid black;
+  margin: 1rem;
+  padding-bottom: 0.1rem;
+}
+.container-section-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  height: 80%;
+  width: 100%;
+  text-align: center;
+}
+.container-section-section h1 {
+  font-size: 34px;
+  font-weight: 700;
+}
+.container-section-section button {
+  margin: 1rem;
+  border-radius: 5px;
+  height: 2.5rem;
+  font-weight: 700;
+  border: 2px solid #013E6A;
+  transition-duration: 0.4s;
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+}
+.container-section-section button:hover {
+  color: #fff;
+  background-color: #013E6A;
+  cursor: pointer;
+}
+.container-prizeImage {
+  background-image: url("../img/prize-bg.webp");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #21242e;
+  border-radius: 0 20px 20px 0;
+}
+.container-message {
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  left: 50%;
+  top: 1rem;
+  transform: translateX(-50%);
+}
+.container-message-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  background-color: orange;
+  text-align: center;
+  padding: 1rem;
+  font-weight: 500;
+  width: 180px;
+  aspect-ratio: 1/1;
+  border-radius: 5px;
+  position: relative;
+}
+.container-message-error p, .container-message-error b {
+  font-size: 17px;
+}
+.container-message-error i {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+}
+.container-message-error i:hover {
+  cursor: pointer;
+}
+
+.active {
+  border-bottom: 2px solid #013E6A;
+}
+
+.fa-circle-check {
+  color: green;
+}
+
+.fa-circle-xmark {
+  color: red;
+}
+
+.invalidValue {
+  border: 2px solid red;
+}
+
+.nameCapitalize {
+  text-transform: capitalize;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  justify-content: center;
+  font-weight: 300;
+}
+footer p, footer p i, footer p a {
+  color: #fff;
+  text-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+}
+footer p a:hover, footer p i a:hover, footer p a a:hover {
+  color: #21242e;
+}
+footer p a:hover i, footer p i a:hover i, footer p a a:hover i {
+  color: #21242e;
+}
+
+/*# sourceMappingURL=styles.css.map */
