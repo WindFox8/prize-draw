@@ -124,8 +124,9 @@ body {
   cursor: pointer;
 }
 .container-section-article {
-  overflow-y: auto;
   display: none;
+  height: 550px;
+  overflow-y: scroll;
 }
 .container-section-article-table {
   width: 100%;
